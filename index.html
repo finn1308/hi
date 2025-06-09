@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>HULI - Fashion Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="left-menu">
+            <span class="menu-icon" id="openMenu">&#9776;</span>
+        </div>
+        <div class="logo">HULI</div>
+        <div class="right-menu">
+            <span class="search-icon" id="searchBtn">&#128269;</span>
+        </div>
+    </header>
+
+    <!-- MENU OVERLAY -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-drawer">
+            <div class="menu-header">
+                <span id="closeMenu" class="close-menu">&times;</span>
+                <span class="menu-title">Đóng</span>
+            </div>
+            <ul class="menu-list">
+                <li class="menu-group" data-group="Tất cả" tabindex="0">Tất cả</li>
+                <li class="menu-group" data-group="Túi" tabindex="0">Túi</li>
+                <li class="menu-group" data-group="Ví" tabindex="0">Ví</li>
+                <li class="menu-group contact-group" id="menuContact" tabindex="0">
+                    <span style="vertical-align:middle;margin-right:7px;">&#9993;</span>
+                    Liên hệ
+                </li>
+            </ul>
+        </div>
+        <div class="menu-backdrop"></div>
+    </div>
+
+    <!-- SEARCH OVERLAY -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-bar">
+            <span class="close-search" id="closeSearch">&times;</span>
+            <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..." autofocus />
+        </div>
+        <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <p class="hero-subtitle">Dành cho giới trẻ</p>
+        <h1 class="hero-title">Phong cách HULI</h1>
+        <a href="#products" class="hero-btn">Khám phá thêm</a>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="product-list-section" id="products">
+            <h2>Sản phẩm nổi bật</h2>
+            <div class="product-list" id="productList"></div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 HULI. All rights reserved.
+    </footer>
+
+    <!-- MODAL CHI TIẾT SẢN PHẨM -->
+    <div id="productModal" class="modal">
+      <div class="modal-content" id="modalContent">
+        <span class="close" id="closeModalBtn">&times;</span>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
