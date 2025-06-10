@@ -547,25 +547,30 @@ function openSizeGuideModal(){
             <div class="modal-content size-guide-modal-content">
                 <span class="close" id="closeSizeGuideModalBtn">&times;</span>
                 <div class="size-guide-title">Kiểm tra kích cỡ</div>
+                <div style="text-align:center;margin-bottom:16px;">
+                    <div style="color:#888;font-size:0.97em;margin-top:4px;">(Bấm vào ảnh để phóng to)</div>
+                </div>
                 <div class="size-guide-row">
                     <span class="size-guide-icon">👕</span>
                     <div>
-                        <b>Bảng Kích Thước</b><br>
+                        <b class="size-guide-link" id="openSizeImage" style="cursor:pointer;color:#1976d2;text-decoration:underline;">Bảng Kích Thước</b><br>
                         Kiểm tra kích cỡ sản phẩm và so sánh với các sản phẩm tương tự (cùng loại) mà bạn đã mua trước đó
                     </div>
                 </div>
                 <div class="size-guide-row">
                     <span class="size-guide-icon">📏</span>
                     <div>
-                        <b>Hướng dẫn chọn chiều dài theo kiểu dáng</b><br>
-                        Hình minh họa kích thước sản phẩm theo chiều cao
+                        <b>Hướng dẫn chọn chiều dài theo kiểu dáng</b>
+                        <span style="color:#888;font-size:0.98em;">(đang cập nhật)</span><br>
+                        <span style="color:#888;">Hình minh họa kích thước sản phẩm theo chiều cao</span>
                     </div>
                 </div>
                 <div class="size-guide-row">
                     <span class="size-guide-icon">👖</span>
                     <div>
-                        <b>MySize ASSIST</b><br>
-                        Kiểm tra và chỉnh sửa số đo được gợi ý bằng cách nhập số đo đơn giản hoặc chụp hình.
+                        <b>MySize ASSIST</b>
+                        <span style="color:#888;font-size:0.98em;">(đang cập nhật)</span><br>
+                        <span style="color:#888;">Kiểm tra và chỉnh sửa số đo được gợi ý bằng cách nhập số đo đơn giản hoặc chụp hình.</span>
                     </div>
                 </div>
             </div>
@@ -577,6 +582,23 @@ function openSizeGuideModal(){
     modal.onclick = function(e) {
         if (e.target === modal) closeSizeGuideModal();
     };
+
+    // Bấm vào ảnh để phóng to
+    const sizeGuideImage = document.getElementById('sizeGuideImage');
+    if(sizeGuideImage){
+        sizeGuideImage.onclick = function(e){
+            e.stopPropagation();
+            showImageFullscreen('images/kichthuoc.jpg');
+        };
+    }
+    // Bấm vào "Bảng Kích Thước" cũng phóng to
+    const openSizeImage = document.getElementById('openSizeImage');
+    if(openSizeImage){
+        openSizeImage.onclick = function(e){
+            e.stopPropagation();
+            showImageFullscreen('images/kichthuoc.jpg');
+        };
+    }
 }
 function closeSizeGuideModal(){
     document.getElementById('sizeGuideModal').style.display = "none";
