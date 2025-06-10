@@ -12,7 +12,7 @@
         <div class="left-menu">
             <span class="menu-icon" id="openMenu">&#9776;</span>
         </div>
-        <div class="logo">HULI</div>
+        <div class="logo" id="huliLogo">HULI</div>
         <div class="right-menu">
             <span class="search-icon" id="searchBtn">&#128269;</span>
         </div>
@@ -27,8 +27,8 @@
             </div>
             <ul class="menu-list">
                 <li class="menu-group" data-group="Tất cả" tabindex="0">Tất cả</li>
-                <li class="menu-group" data-group="Túi" tabindex="0">Túi</li>
-                <li class="menu-group" data-group="Ví" tabindex="0">Ví</li>
+                <li class="menu-group" data-group="Quần dài" tabindex="0">Quần dài</li>
+                <li class="menu-group" data-group="Quần đùi" tabindex="0">Quần đùi</li>
                 <li class="menu-group contact-group" id="menuContact" tabindex="0">
                     <span style="vertical-align:middle;margin-right:7px;">&#9993;</span>
                     Liên hệ
@@ -62,6 +62,10 @@
             <h2>Sản phẩm nổi bật</h2>
             <div class="product-list" id="productList"></div>
         </section>
+        <section class="video-list-section" id="videos">
+            <h2> </h2>
+            <div class="video-list" id="videoList"></div>
+        </section>
     </main>
     <footer>
         &copy; 2025 HULI. All rights reserved.
@@ -74,6 +78,36 @@
       </div>
     </div>
 
+    <!-- MODAL LIÊN HỆ -->
+    <div id="contactModal" class="modal">
+      <div class="modal-content contact-modal-content">
+        <span class="close" id="closeContactModalBtn">&times;</span>
+        <h3>Liên hệ với chúng tôi</h3>
+        <div class="contact-desc">Trung tâm Tư vấn Khách hàng của HULI rất hân hạnh được hỗ trợ quý khách.</div>
+        <div class="contact-row"><span class="contact-icon">📞</span> <a href="tel:0383770005" style="color:#222;font-weight:600;text-decoration:underline">0383770005</a></div>
+        <div class="contact-row"><span class="contact-icon">💬</span> <a href="https://zalo.me/0383770005" target="_blank" style="color:#222;font-weight:600;text-decoration:underline">Zalo</a></div>
+        <hr style="margin:18px 0 12px 0">
+        <div class="contact-help-title" style="font-size:1.08em;margin-bottom:7px;">Chúng tôi có thể giúp gì được cho quý khách?</div>
+        <div style="font-weight:bold;margin:8px 0 8px 0;">CÂU HỎI THƯỜNG GẶP</div>
+        <ul class="faq">
+          <li><a href="#">Làm thế nào để kiểm tra tình trạng đơn hàng?</a></li>
+          <li><a href="#">Chính sách đổi/trả sản phẩm?</a></li>
+          <li><a href="#">Hỗ trợ về thanh toán?</a></li>
+          <li><a href="#">HULI có các cửa hàng ở đâu?</a></li>
+          <li><a href="#">Cách chọn size sản phẩm phù hợp?</a></li>
+          <li><a href="#">Có hỗ trợ giao hàng toàn quốc không?</a></li>
+          <li><a href="#">Tôi muốn xuất hóa đơn VAT?</a></li>
+          <li><a href="#">Khuyến mãi hiện tại là gì?</a></li>
+          <li><a href="#">Làm thế nào để bảo quản sản phẩm?</a></li>
+          <li><a href="#">Sản phẩm có bảo hành không?</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- OVERLAY LOADING HULI (chữ đứng yên) -->
+    <div id="huliLoadingOverlay" class="huli-loading-overlay">
+      <div class="huli-loading-message" id="huliLoadingMessage">xin vui lòng đợi, Huli</div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
